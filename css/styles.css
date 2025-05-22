@@ -1,16 +1,55 @@
+/* common styles */
+
 body {
   font-family: "Roboto", sans-serif;
   color: #434455;
   background-color: #fff;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 ul,
 ol {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
   text-decoration: none;
+}
+
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* common styles end */
+
+/* header styles */
+
+.page-header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
 }
 
 .header-logo {
@@ -21,10 +60,18 @@ a {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  padding: 24px 0;
+  margin-right: 76px;
 }
 
 .header-logo-part {
   color: #2e2f42;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .nav-link {
@@ -33,6 +80,8 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding: 24px 0;
+  display: block;
 }
 
 .nav-link:hover,
@@ -42,6 +91,13 @@ a {
 
 .contacts {
   font-style: normal;
+  margin-left: auto;
+}
+
+.contacts-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .contacts-link {
@@ -49,6 +105,8 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  padding: 24px 0;
+  display: block;
 }
 
 .contacts-link:hover,
@@ -56,8 +114,21 @@ a {
   color: #404bbf;
 }
 
+/* header styles end */
+
+/* hero styles */
+
+.section {
+  padding: 120px 0;
+}
+
 .hero-section {
   background-color: #2e2f42;
+  padding: 188px 0;
+  max-width: 1440px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-title {
@@ -66,6 +137,11 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 48px;
+  max-width: 496px;
 }
 
 .hero-button {
@@ -75,12 +151,42 @@ a {
   letter-spacing: 0.04em;
   color: #fff;
   background-color: #4d5ae5;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+  padding: 16px 32px;
 }
 
 .hero-button:hover,
 .hero-button:focus {
   background-color: #404bbf;
+}
+
+/* hero styles end */
+
+/* features styles */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.features-list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: calc(100% - 72) / 4;
 }
 
 .features-titles {
@@ -89,6 +195,7 @@ a {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding-bottom: 8px;
 }
 
 .features-description {
@@ -96,6 +203,10 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
+
+/* features styles end */
+
+/* our team styles */
 
 .team {
   background-color: #f4f4fd;
@@ -112,6 +223,24 @@ a {
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
+  padding-bottom: 72px;
+}
+
+.team-list {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 72) / 4;
+  gap: 24px;
+}
+
+.team-items {
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.name-profession {
+  padding: 32px 16px;
 }
 
 .team-member-name {
@@ -121,6 +250,7 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  padding-bottom: 8px;
 }
 
 .team-member-profession {
@@ -130,12 +260,34 @@ a {
   text-align: center;
 }
 
+/* our team styles end */
+
+/* portfolio styles */
+
+.portfolio-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: calc(100% - 144) / 6;
+  gap: 48px 24px;
+}
+
+.portfolio-image-title-text {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  border-bottom: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
+}
+
 .portfolio-examples {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding-bottom: 8px;
 }
 
 .portfolio-type {
@@ -144,8 +296,13 @@ a {
   letter-spacing: 0.02em;
 }
 
+/* portfolio styles end */
+
+/* footer styles */
+
 .page-footer {
   background-color: #2e2f42;
+  padding: 100px 1020px 100px 156px;
 }
 
 .footer-logo {
@@ -156,6 +313,8 @@ a {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
+  display: inline-block;
+  padding: 16px 0;
 }
 
 .footer-logo-part {
@@ -167,4 +326,5 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  max-width: 264px;
 }
